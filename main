@@ -1,0 +1,143 @@
+//..............................................................................
+//..............................................................................
+// HARVESTER's logic (main.js linked to harvester.js)
+var harvester = require('harvester');
+
+for(var i in Game.creeps) {
+	var creep = Game.creeps[i];
+//..............................................................................
+//..............................................................................
+// HARVESTER's logic (main.js linked to harvester.js)
+var harvester = require('harvester');
+for(var i in Game.creeps) {
+    var creep = Game.creeps[i];
+    if(creep.memory.role == 'harvester') {
+        harvester(creep);
+    }
+}
+// what is need is just SPAWNING creeps through CONSOLE and MEMORY
+//..............................................................................
+//..............................................................................
+// BUILDER's logic (main.js linked to builder.js)
+var builder = require('builder');
+for(var i in Game.creeps) {
+    var creep = Game.creeps[i];
+    if(creep.memory.role == 'builder') {
+        builder(creep);
+    }
+}
+// what is need is just SPAWNING creeps through CONSOLE and MEMORY
+//..............................................................................
+//..............................................................................
+// GUARD's logic (main.js linked to builder.js)
+
+
+	if(creep.memory.role == 'harvester') {
+		harvester(creep);
+	}
+}
+
+// what is need is just SPAWNING creeps through CONSOLE and MEMORY
+//..............................................................................
+//..............................................................................
+
+// BUILDER's logic (main.js linked to builder.js)
+var builder = require('builder');
+
+for(var i in Game.creeps) {
+	var creep = Game.creeps[i];
+
+	if(creep.memory.role == 'builder') {
+		builder(creep);
+	}
+}
+// what is need is just SPAWNING creeps through CONSOLE and MEMORY
+//..............................................................................
+//..............................................................................
+
+// GUARD's logic (main.js linked to builder.js)
+var guard = require('guard');
+
+for(var a in Game.creeps) {
+	var creep = Game.creeps[a];
+
+	if(creep.memory.role == 'guard') {
+		guard(creep);
+	}
+}
+
+// what is need is just SPAWNING creeps through CONSOLE and MEMORY
+//..............................................................................
+//..............................................................................
+
+//Spawning flow from bottom to up
+// spawning at start
+
+
+//spawning 5 guard
+
+Game.spawns.Spawn1.createCreep(
+	[Game.TOUGH, Game.ATTACK, Game.MOVE, Game.MOVE, Game.ATTACK],
+	'Guard5'
+);
+Memory.creeps.Guard5.role = 'guard';
+Game.spawns.Spawn1.createCreep(
+	[Game.TOUGH, Game.ATTACK, Game.MOVE, Game.MOVE, Game.ATTACK],
+	'Guard4'
+);
+Memory.creeps.Guard4.role = 'guard';
+Game.spawns.Spawn1.createCreep(
+	[Game.TOUGH, Game.ATTACK, Game.MOVE, Game.MOVE, Game.ATTACK],
+	'Guard3'
+);
+Memory.creeps.Guard3.role = 'guard';
+
+Game.spawns.Spawn1.createCreep(
+	[Game.TOUGH, Game.ATTACK, Game.MOVE, Game.MOVE, Game.ATTACK],
+	'Guard2'
+);
+Memory.creeps.Guard2.role = 'guard';
+
+Game.spawns.Spawn1.createCreep(
+	[Game.TOUGH, Game.ATTACK, Game.MOVE, Game.MOVE, Game.ATTACK],
+	'Guard1'
+);
+Memory.creeps.Guard1.role = 'guard';
+
+
+
+//spawning 4 workers
+
+Game.spawns.Spawn1.createCreep(
+	[Game.WORK, Game.CARRY, Game.MOVE],
+	'Worker4'
+);
+Memory.creeps.Worker4.role = 'harvester';
+
+Game.spawns.Spawn1.createCreep(
+	[Game.WORK, Game.CARRY, Game.MOVE],
+	'Worker3'
+);
+Memory.creeps.Worker3.role = 'harvester';
+Game.spawns.Spawn1.createCreep(
+	[Game.WORK, Game.CARRY, Game.MOVE],
+	'Worker2'
+);
+Memory.creeps.Worker2.role = 'harvester';
+Game.spawns.Spawn1.createCreep(
+	[Game.WORK, Game.CARRY, Game.MOVE],
+	'Worker1'
+);
+Memory.creeps.Worker1.role = 'harvester';
+
+//........................................
+
+
+
+
+
+
+
+
+
+
