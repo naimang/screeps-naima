@@ -1,0 +1,14 @@
+ module.exports = function (creep) {
+     
+     //this code is to move all 'guard' with the positioned flag 
+     var guard = require('guard');
+creep.moveTo(Game.flags.Flag1);
+
+    //this code is to kill enemy on sight
+    var enemies = creep.pos.findInRange(Game.HOSTILE_CREEPS, 3);
+    if(enemies.length > 0)
+      creep.moveTo(enemies[0]);
+      creep.attack(enemies[0]);
+  },
+('end');
+
